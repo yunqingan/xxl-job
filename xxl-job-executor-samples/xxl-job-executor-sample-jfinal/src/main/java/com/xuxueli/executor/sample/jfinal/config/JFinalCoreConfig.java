@@ -5,6 +5,7 @@ import com.jfinal.kit.Prop;
 import com.jfinal.kit.PropKit;
 import com.xuxueli.executor.sample.jfinal.controller.IndexController;
 import com.xuxueli.executor.sample.jfinal.jobhandler.DemoJobHandler;
+import com.xuxueli.executor.sample.jfinal.jobhandler.HttpJobHandler;
 import com.xuxueli.executor.sample.jfinal.jobhandler.ShardingJobHandler;
 import com.xxl.job.core.executor.XxlJobExecutor;
 import org.slf4j.Logger;
@@ -17,23 +18,26 @@ public class JFinalCoreConfig extends JFinalConfig {
 	private Logger logger = LoggerFactory.getLogger(JFinalCoreConfig.class);
 
 	// ---------------------- xxl-job executor ----------------------
-	XxlJobExecutor xxlJobExecutor = null;
+	private XxlJobExecutor xxlJobExecutor = null;
 	private void initXxlJobExecutor() {
+
 		// registry jobhandler
 		XxlJobExecutor.registJobHandler("demoJobHandler", new DemoJobHandler());
 		XxlJobExecutor.registJobHandler("shardingJobHandler", new ShardingJobHandler());
+		XxlJobExecutor.registJobHandler("httpJobHandler", new HttpJobHandler());
 
 		// load executor prop
 		Prop xxlJobProp = PropKit.use("xxl-job-executor.properties");
 
 		// init executor
 		xxlJobExecutor = new XxlJobExecutor();
+		xxlJobExecutor.setAdminAddresses(xxlJobProp.get("xxl.job.admin.addresses"));
+		xxlJobExecutor.setAppName(xxlJobProp.get("xxl.job.executor.appname"));
 		xxlJobExecutor.setIp(xxlJobProp.get("xxl.job.executor.ip"));
 		xxlJobExecutor.setPort(xxlJobProp.getInt("xxl.job.executor.port"));
-		xxlJobExecutor.setAppName(xxlJobProp.get("xxl.job.executor.appname"));
-		xxlJobExecutor.setAdminAddresses(xxlJobProp.get("xxl.job.admin.addresses"));
-		xxlJobExecutor.setLogPath(xxlJobProp.get("xxl.job.executor.logpath"));
 		xxlJobExecutor.setAccessToken(xxlJobProp.get("xxl.job.accessToken"));
+		xxlJobExecutor.setLogPath(xxlJobProp.get("xxl.job.executor.logpath"));
+		xxlJobExecutor.setLogRetentionDays(xxlJobProp.getInt("xxl.job.executor.logretentiondays"));
 
 		// start executor
 		try {

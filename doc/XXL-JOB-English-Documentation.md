@@ -5,11 +5,16 @@
 [![GitHub release](https://img.shields.io/github/release/xuxueli/xxl-job.svg)](https://github.com/xuxueli/xxl-job/releases)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
 [![Gitter](https://badges.gitter.im/xuxueli/xxl-job.svg)](https://gitter.im/xuxueli/xxl-job?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![donate](https://img.shields.io/badge/%24-donate-ff69b4.svg?style=flat-square)](http://www.xuxueli.com/page/donate.html)
+
 
 ## 1. Brief introduction
 
 ### 1.1 Overview
 XXL-JOB is a lightweight distributed task scheduling framework, the core design goal is to develop quickly, learning simple, lightweight, easy to expand. Is now open source and access to a number of companies online product line, download and use it now.
+
+> English document update slightly delayed, Please check the Chinese version for the latest document.
+
 ### 1.2 Features
 - 1.Simple: support through the Web page on the task CRUD operation, simple operation, a minute to get started;
 - 2.Dynamic: support dynamic modification of task status, pause / resume tasks, and termination of running tasks,immediate effect;
@@ -96,6 +101,76 @@ So far, XXL-JOB has access to a number of companies online product line, access 
     - 45、广州知识圈网络科技有限公司
     - 46、国誉商业上海有限公司
     - 47、海尔消费金融有限公司，嗨付、够花 (海尔)
+    - 48、广州巴图鲁信息科技有限公司
+    - 49、深圳市鹏海运电子数据交换有限公司
+    - 50、深圳市亚飞电子商务有限公司
+    - 51、上海趣医网络有限公司
+    - 52、聚金资本
+    - 53、北京父母邦网络科技有限公司
+    - 54、中山元赫软件科技有限公司
+    - 55、中商惠民(北京)电子商务有限公司
+    - 56、凯京集团
+    - 57、华夏票联（北京）科技有限公司
+    - 58、拍拍贷
+    - 59、北京尚德机构在线教育有限公司
+    - 60、任子行股份有限公司
+    - 61、北京时态电子商务有限公司
+    - 62、深圳卷皮网络科技有限公司
+    - 63、北京安博通科技股份有限公司
+    - 64、未来无线网
+    - 65、厦门瓷禧网络有限公司
+    - 66、北京递蓝科软件股份有限公司
+    - 67、郑州创海软件科技公司
+    - 68、北京国槐信息科技有限公司
+    - 69、浪潮软件集团
+    - 70、多立恒(北京)信息技术有限公司
+    - 71、广州极迅客信息科技有限公司
+    - 72、赫基（中国）集团股份有限公司
+    - 73、海投汇
+    - 74、上海润益创业孵化器管理股份有限公司
+    - 75、汉纳森（厦门）数据股份有限公司
+    - 76、安信信托
+    - 77、岚儒财富
+    - 78、捷道软件
+    - 79、湖北享七网络科技有限公司
+    - 80、湖南创发科技责任有限公司
+    - 81、深圳小安时代互联网金融服务有限公司
+    - 82、湖北享七网络科技有限公司
+    - 83、钱包行云(北京)科技有限公司
+    - 84、360金融 (360)
+    - 85、易企秀
+    - 86、摩贝（上海）生物科技有限公司
+    - 87、广东芯智慧科技有限公司
+    - 88、联想集团 (联想)
+    - 89、怪兽充电
+    - 90、行圆汽车
+    - 91、深圳店店通科技邮箱公司
+    - 92、京东 (京东)
+    - 93、米庄理财
+    - 94、咖啡易融
+    - 95、梧桐诚选
+    - 96、恒大地产 (恒大)
+    - 97、昆明龙慧
+    - 98、上海涩瑶软件
+    - 99、易信 (网易)
+    - 100、铜板街
+    - 101、杭州云若网络科技有限公司
+    - 102、特百惠（中国）有限公司
+    - 103、常山众卡运力供应链管理有限公司
+    - 104、深圳立创电子商务有限公司
+    - 105、杭州智诺科技股份有限公司
+    - 106、北京云漾信息科技有限公司
+    - 107、深圳市多银科技有限公司
+    - 108、亲宝宝
+    - 109、上海博卡软件科技有限公司
+    - 110、智慧树在线教育平台
+    - 111、米族金融
+    - 112、北京辰森世纪
+    - 113、云南滇医通
+    - 114、广州市分领网络科技有限责任公司
+    - 115、浙江微能科技有限公司
+    - 116、上海馨飞电子商务有限公司
+    - 117、上海宝尊电子商务有限公司
 	- ……
 
 > The company that access and use this product is welcome to register at the [address](https://github.com/xuxueli/xxl-job/issues/1 ), only for product promotion. 
@@ -113,7 +188,7 @@ Welcome everyone's attention and use, XXL-JOB will also embrace changes, sustain
 Source repository address | Release Download
 --- | ---
 [https://github.com/xuxueli/xxl-job](https://github.com/xuxueli/xxl-job) | [Download](https://github.com/xuxueli/xxl-job/releases)  
-[http://git.oschina.net/xuxueli0323/xxl-job](http://git.oschina.net/xuxueli0323/xxl-job) | [Download](http://git.oschina.net/xuxueli0323/xxl-job/releases)
+[http://gitee.com/xuxueli0323/xxl-job](http://gitee.com/xuxueli0323/xxl-job) | [Download](http://gitee.com/xuxueli0323/xxl-job/releases)
 
 #### Center repository address (The latest Release version：1.8.1)
 ```
@@ -194,12 +269,15 @@ The concrete contet describe as follows:
     
     ### TOKEN used for communication between the executor and schedule center, enabled if it’s not null
     xxl.job.accessToken=
+    
+    ### Internationalized Settings, the default is Chinese version，Switch to English when the value is "en".
+    xxl.job.i18n=en
 
 #### Step 2:Deploy:
 If you has finished step 1,then you can compile the project in maven and deploy the war package to tomcat.
 the url to visit is :http://localhost:8080/xxl-job-admin (this address will be used by executor and use it as callback url),the index page after login in is as follow
 
-![index page after login in](https://static.oschina.net/uploads/img/201705/08194505_6yC0.png "index page after login in")
+![index page after login in](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_6yC0.png "index page after login in")
 
 Now,the “xxl-job-admin” project is deployed success.
 
@@ -293,16 +371,16 @@ Now let’s create a "GLUE模式(Java)" job,if you want to learn more about it ,
 #### Step 1:Create new job
 Login in xxl-job-admin,click on the"新建任务" button, configure the job params as follows and click "保存" button to save the job info.
 
-![task management](https://static.oschina.net/uploads/img/201704/27205910_o8HQ.png "task management")
+![task management](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_o8HQ.png "task management")
 
-![create task](https://static.oschina.net/uploads/img/201704/27210202_SE2u.png "create task")
+![create task](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_ZAsz.png "create task")
 
 #### Step 2：develop “GLUE模式(Java)” job
 Click “GLUE” button on the right of the job to go to GLUE editor view as shown below。“GLUE模式(Java)” mode task has been inited with default task code for printing Hello World。 （ “GLUE模式(Java)” mode task is a java code fragment implements IJobHandler interface,it will be executed in executor,you can use @Resource/@Autowire to inject other java bean instance,if you want to see more info please go to chapter 3）
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27210307_Fgql.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Fgql.png "在这里输入图片标题")
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27210314_dNUJ.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_dNUJ.png "在这里输入图片标题")
 
 #### Step 3:trigger task
 If you want to run the job manually please click "执行" button on the right of the job(usually we trigger job by Cron expression)
@@ -310,11 +388,11 @@ If you want to run the job manually please click "执行" button on the right of
 #### Step 4:view log 
 Click “日志” button on the right side of the task you will go to the task log list ,you will see the schedule history records of the task and the schedule detail info,execution info and execution params.If you click the “执行日志” button on the right side of the task log record,you will go to log console and view the execute log in the course of task execution.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27232850_inc8.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_inc8.png "在这里输入图片标题")
 
 On the log console,you can view task execution log on the executor immediately after it dump to log file,so you can monitor the task execution process by Rolling way.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27211631_eYrv.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_eYrv.png "在这里输入图片标题")
 
 ## 3. Task details
 
@@ -340,7 +418,7 @@ On the log console,you can view task execution log on the executor immediately a
         GLUE模式(Java)：task source code is maintened in the schedule center,it must implement IJobHandler and explain by "groovy" in the executor instance,inject other bean instace by annotation @Resource/@Autowire.
         GLUE模式(Shell)：it’s source code is a shell script and maintained in the schedule center.
         GLUE模式(Python)：it’s source code is a python script and maintained in the schedule center.
-    - JobHandler：it’s used in  "BEAN模式",it’s instance is defined by annotation @JobHander on the JobHandler class name.
+    - JobHandler：it’s used in  "BEAN模式",it’s instance is defined by annotation @JobHandler on the JobHandler class name.
     - 子任务Key：every task has a unique key (task Key can acquire from task list)，when main task is done successfully it’s child task stand for by this key will be scheduled.
     - 阻塞处理策略：the stategy handle the task when this task is scheduled too frequently and the task is block to wait for cpu time.
         单机串行（默认）：task schedule request go into the FIFO queue and execute serially.
@@ -359,15 +437,15 @@ The task logic exist in the executor project as JobHandler,the develop steps as 
 #### Step 1:develp obHandler in the executor project
     - 1, create new java class implent com.xxl.job.core.handler.IJobHandler;
     - 2, if you add @Component annotation on the top of the class name it’s will be managed as a bean instance by spring container;
-    - 3, add  “@JobHander(value=" customize jobhandler name")” annotation，the value stand for JobHandler name,it will be used as JobHandler property when create a new task in the schedule center.
+    - 3, add  “@JobHandler(value=" customize jobhandler name")” annotation，the value stand for JobHandler name,it will be used as JobHandler property when create a new task in the schedule center.
     （go and see DemoJobHandler in the xxl-job-executor-example project, as shown below）
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/23232347_oLlM.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_oLlM.png "在这里输入图片标题")
 
 #### Step 2:create task in schedule center
 If you want learn more about configure item please go and sedd “Description of configuration item”，select  "BEAN模式" as run mode，property JobHandler please fill in the value defined by @JobHande.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27225124_yrcO.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_ZAsz.png "在这里输入图片标题")
 
 ### 3.2 GLUE模式(Java)
 Task source code is maintained in the schedule center and can be updated by Web IDE online, it will be compiled and effective real-time,didn’t need to assign JobHandler,develop flow shown as below:
@@ -375,14 +453,14 @@ Task source code is maintained in the schedule center and can be updated by Web 
 #### Step 1:create task in schedule center
 If you want learn more about configure item please go and sedd “Description of configuration item”，select "GLUE模式(Java)" as run mode.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27210202_SE2u.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_tJOq.png "在这里输入图片标题")
 
 #### Step 2:develop task source code
 Select the task record and click “GLUE” button on the righe of it,it will go to GLUE task’s WEB IDE page,on this page yo can edit you task code(also can edit in other IDE tools,copy and paste into this page).
 
 Version backtrack（support 30 versions while backtrack）：on the WEB IDE page of GLUE task,on upper right corner drop down box please select “版本回溯”,it will display GLUE updated history,select the version you want it will display the source code of this version,it will backtrace the version while click save button. 
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27210314_dNUJ.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_dNUJ.png "在这里输入图片标题")
 
 ### 3.3 GLUE模式(Shell)
 
@@ -394,7 +472,7 @@ Select the task record and click “GLUE” button on the righe of it,it will go
 
 Actually it is a shell script fragment.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27232259_iUw0.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_iUw0.png "在这里输入图片标题")
 
 ### 3.4 GLUE模式(Python)
 
@@ -406,19 +484,19 @@ Select the task record and click “GLUE” button on the righe of it,it will go
 
 Actually it is a python script fragment.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27232305_BPLG.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_BPLG.png "在这里输入图片标题")
 
 
 ## 4. Task Management
 ### 4.0 configure executor
 click"执行器管理" on the left menu,it will go to the page as shown below:
-![输入图片说明](https://static.oschina.net/uploads/img/201703/12223509_Hr2T.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Hr2T.png "在这里输入图片标题")
 
     1,"调度中心OnLine”:display schedule center machine list,when task is scheduled it will callback schedule center for notify the execution result in failover mode, so that it can avoid a single point scheduler;
     2,"执行器列表" :display all nodes under this executor group.
 
 If you want to create a new executor,please click "+新增执行器" button: 
-![输入图片说明](https://static.oschina.net/uploads/img/201703/12223617_g3Im.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_V3vF.png "在这里输入图片标题")
 
 ### Description of executor attributes
 
@@ -445,19 +523,19 @@ choose the task you want to edit and click” GLUE”button on the right side of
 ### 4.4 pause/recover task
 You can pause or recover task but it just fit to follow up schedule trigger and won’t affect scheduled tasks,if you want to stop tasks which has been triggered,please go and see “4.8 stop the running task”
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24130337_ZAhX.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_ZAhX.png "在这里输入图片标题")
 
 ### 4.5 manually trigger
 You can trigger a task manually by Click “执行”button,it won’t affect original scheduling rules.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24133348_Z5wp.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Z5wp.png "在这里输入图片标题")
 
 ### 4.6 view schedule log
 You can view task’s history schedule log by click “日志” button,on the history schedule log list page you can view every time of task’s schedule result,execution result and so on,click “执行日志” button can view the task’s full execute log.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24133500_9235.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_9235.png "在这里输入图片标题")
 
-![输入图片说明](https://static.oschina.net/uploads/img/201704/27232850_inc8.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_inc8.png "在这里输入图片标题")
 
     调度时间:schedule center trigger time when schedule and send execution signal to executor;
     调度结果:schedule center trigger task’s result, 200 represent success,500 or other number stands for fail;
@@ -475,12 +553,12 @@ You can view task’s history schedule log by click “日志” button,on the h
 ### 4.7 view execution log
 Click the “执行日志” button on the right side of the record,you can go to the execution log page,you can view the full execution log of the logic business code, shown as below:
 
-![输入图片说明](https://static.oschina.net/uploads/img/201703/25124816_tvGI.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_tvGI.png "在这里输入图片标题")
 
 ### 4.8 stop running tasks
 Just fit to running tasks,on the task log list page,click “终止任务” button on the right side of the record, it will send stop command to the executor where the task was executed,finally the task was killed and the task instance execute queue of this task will be clear.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24140048_hIci.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_hIci.png "在这里输入图片标题")
 
 It is implemented by interrupt execute thread, it will trigger InterruptedException.so if JobHandler catch this execuption and handle this exception this function is unavailable.
 
@@ -501,14 +579,14 @@ If JobHandler start child thread,child thread also must not catch InterruptedExc
 
 ### 4.9 delete execution log
 On the task log list page, after you select executor and task, you can click"删除" button on the right side and it will pop-up "日志清理" window,on the pop-up window you can choose different log delete policy,choose the policy you want to execute and click "确定" button it will delele relative logs:
-![输入图片说明](https://static.oschina.net/uploads/img/201705/08210711_Ypik.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Ypik.png "在这里输入图片标题")
 
-![输入图片说明](https://static.oschina.net/uploads/img/201705/08211152_EB65.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_EB65.png "在这里输入图片标题")
 
 ### 4.10 delete task
 Click the delete button on the right side of the task,the task will be deteted.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24140641_Z9Qr.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Z9Qr.png "在这里输入图片标题")
 
 ## 5. Overall design
 ### 5.1 Source directory introduction
@@ -523,7 +601,7 @@ XXL-JOB schedule module is implemented based on Quartz cluster,it’s “databas
 
 XXL-JOB custom Quartz table structure prefix(XXL_JOB_QRTZ_).
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24143957_bNwm.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_bNwm.png "在这里输入图片标题")
 
 The added tables as shown below:
     - XXL_JOB_QRTZ_TRIGGER_GROUP:executor basic table, maintain the info about the executor;
@@ -552,7 +630,7 @@ So schedule and task can be decoupled from each other, by the way it can improve
 
 #### 5.3.3 Architecture diagram
 
-![输入图片说明](https://static.oschina.net/uploads/img/201707/17190028_aEE2.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Qohm.png "在这里输入图片标题")
 
 ### 5.4 Schedule module analysis
 #### 5.4.1 Disadvantage of quartz
@@ -633,10 +711,9 @@ Executor will execute task when it receive task execute request.it will notify t
 If executor project was deployed as cluster schedule center will known all online executor nodes,such as:“127.0.0.1:9997, 127.0.0.1:9998, 127.0.0.1:9999”.
 
 When "路由策略" select "故障转移(FAILOVER)",it will send heart beat check request in order while schedule center start schedule request.  The first alive checked executor node will be selected and send schedule request to it.
-![输入图片说明](https://static.oschina.net/uploads/img/201705/11221144_P128.png "在这里输入图片标题")
 
 “调度备注” can be viewed on the monitor page when schedule success. As shown below: 
-![输入图片说明](https://static.oschina.net/uploads/img/201703/12230733_jrdI.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_jrdI.png "在这里输入图片标题")
 
 “调度备注” will display local schedule route path、executor’s "注册方式"、"地址列表" and task’s "路由策略"。Under "故障转移(FAILOVER)" policy, schedule center take first address to do heartbeat detection, heat beat fail will automatically skip, the second address heart beat fail…… until the third address “127.0.0.1:9999” heart beat success, it was selected as target executor, then send schedule request to target executor, now the schedule process is end wait for the executor’s callback execution result.
 
@@ -646,8 +723,6 @@ Every time when task was scheduled in the schedule center it will record a task 
 - 任务信息:include executor address、JobHandler and executor params，accord these parameters it can locate specific machine and task code that the task will be executed.
 - 调度信息:include schedule time、schedule result and  schedule log  and so on，accord these parameters you can understand some task schedule info of schedule center.
 - 执行信息:include execute time、execute result and execute log and so on, accord these parameters you can understand the task execution info in the executor.
-
-![输入图片说明](https://static.oschina.net/uploads/img/201703/12221436_c8Ru.png "在这里输入图片标题")
 
 Schedule log stands fo single task schedule, attribute description is as follows:
 - 执行器地址:machine addresses on which task will be executed.
@@ -668,14 +743,14 @@ When parent task end execute and success, it will match child task dependency ac
 
 On the task log page ,you can see matched child task and triggered child task’s log info when you “查看”button of “执行备注”,otherwise the child task didin’t execute, as shown beleow:
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24194134_Wb2o.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_Wb2o.png "在这里输入图片标题")
 
-![输入图片说明](https://static.oschina.net/uploads/img/201607/24194212_jOAU.png "在这里输入图片标题")
+![输入图片说明](https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/img_jOAU.png "在这里输入图片标题")
 
 ### 5.5 Task "run mode" analysis
 #### 5.5.1 "Bean模式" task
 Development steps:go and see "chapter 3" . 
-principle: every Bean mode task is a Spring Bean instance and it is maintained in executor project’s Spring container. task class nedd to add “@JobHander(value="name")” annotation, because executor identify task bean instance in spring container through annotation. Task class nedd to implements interface IJobHandler, task logic code in method execute(), the task logic in execute() method will be executed when executor received a schedule request from schedule center.
+principle: every Bean mode task is a Spring Bean instance and it is maintained in executor project’s Spring container. task class nedd to add “@JobHandler(value="name")” annotation, because executor identify task bean instance in spring container through annotation. Task class nedd to implements interface IJobHandler, task logic code in method execute(), the task logic in execute() method will be executed when executor received a schedule request from schedule center.
 
 #### 5.5.2 "GLUE模式(Java)" task
 Development steps:go and see "chapter 3" .
@@ -694,9 +769,7 @@ All supported types of scripts as shown beloes:
 #### 5.5.4 executor
 Executor is actually an embedded Jetty server with default port 9999, as shown below（parameter:xxl.job.executor.port）.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201703/10174923_TgNO.png "在这里输入图片标题")
-
-Executor will identify Bean mode task in spring container through @JobHander When project start, it will be managed use the value of annotation as key. 
+Executor will identify Bean mode task in spring container through @JobHandler When project start, it will be managed use the value of annotation as key. 
 
 When executor received schedule request from schedule center, if task type is “Bean模式” it will match bean mode task in Spring container and call it’s execute() method and execute task logic. if task type is “GLUE模式”, it will load Glue code, instantiate a Java object and inject other spring service（notice: the spring service injected in Glue code must exist in the same executor project）, then call execute() method and execute task logic. 
 
@@ -769,7 +842,7 @@ The scheduling center provides API services for executors and business parties t
 
 The scheduling center API service location: com.xxl.job.core.biz.AdminBiz.java
 
-The scheduling center API service requests reference code：com.xxl.job.dao.impl.AdminBizTest.java
+The scheduling center API service requests reference code：com.xxl.job.adminbiz.AdminBizTest.java
 
 
 ## 6 Version update log
@@ -803,13 +876,13 @@ The scheduling center API service requests reference code：com.xxl.job.dao.impl
 		- stability;
 
 ### 6.3 version V1.3.0，New features [2016-05-19]
-- 1、discard local task module, remote task was recommended, easy to decouple system, the JobHander of task was called executor.
+- 1、discard local task module, remote task was recommended, easy to decouple system, the JobHandler of task was called executor.
 - 2、dicard underlying communication type servlet, JETTY was recommended, schedule and callback bidirectional communication, rebuild the communication logic;
 - 3、UI interactive optimization:optimize left menu expansion and menu item selected status , task list opens the table with compression optimization;
 - 4、【important】executor is subdivided into two develop mode:BEAN、GLUE:
 	
 	Introduction to the executor mode:
-		- BEAN mode executor:every executor is a Spring Bean instance，it was recognized and scheduled by XXL-JOB through @JobHander annotation;
+		- BEAN mode executor:every executor is a Spring Bean instance，it was recognized and scheduled by XXL-JOB through @JobHandler annotation;
 		 -GLUE mode executor:every executor corresponds to a piece of code，edited and maintained online by Web, Dynamic compile and takes effect in real time, executor is responsible for loading GLUE code and executing;
 
 ### 6.4 version V1.3.1，New features [2016-05-23]
@@ -1008,7 +1081,4 @@ This product is open source and free, and will continue to provide free communit
 
 ---
 ### Donate
-No matter how much the amount is enough to express your thought, thank you very much ：）
-
-Webchat：<img src="https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/donate-wechat.png" width="200">
-Alipay：<img src="https://raw.githubusercontent.com/xuxueli/xxl-job/master/doc/images/donate-alipay.jpg" width="200">
+No matter how much the amount is enough to express your thought, thank you very much ：）     [To donate](http://www.xuxueli.com/page/donate.html )

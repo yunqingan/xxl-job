@@ -1,20 +1,19 @@
 package com.xxl.job.admin.service.impl;
 
-import com.xxl.job.admin.controller.JobApiController;
 import com.xxl.job.admin.core.model.XxlJobInfo;
 import com.xxl.job.admin.core.model.XxlJobLog;
-import com.xxl.job.admin.core.schedule.XxlJobDynamicScheduler;
-import com.xxl.job.admin.core.trigger.XxlJobTrigger;
+import com.xxl.job.admin.core.thread.JobTriggerPoolHelper;
+import com.xxl.job.admin.core.trigger.TriggerTypeEnum;
+import com.xxl.job.admin.core.util.I18nUtil;
 import com.xxl.job.admin.dao.XxlJobInfoDao;
 import com.xxl.job.admin.dao.XxlJobLogDao;
 import com.xxl.job.admin.dao.XxlJobRegistryDao;
-import com.xxl.job.admin.service.XxlJobService;
 import com.xxl.job.core.biz.AdminBiz;
 import com.xxl.job.core.biz.model.HandleCallbackParam;
 import com.xxl.job.core.biz.model.RegistryParam;
 import com.xxl.job.core.biz.model.ReturnT;
-import org.apache.commons.lang.StringUtils;
-import org.quartz.SchedulerException;
+import com.xxl.job.core.handler.IJobHandler;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -37,8 +36,6 @@ public class AdminBizImpl implements AdminBiz {
     private XxlJobInfoDao xxlJobInfoDao;
     @Resource
     private XxlJobRegistryDao xxlJobRegistryDao;
-    @Resource
-    private XxlJobService xxlJobService;
 
 
     @Override
@@ -46,7 +43,7 @@ public class AdminBizImpl implements AdminBiz {
         for (HandleCallbackParam handleCallbackParam: callbackParamList) {
             ReturnT<String> callbackResult = callback(handleCallbackParam);
             logger.info(">>>>>>>>> JobApiController.callback {}, handleCallbackParam={}, callbackResult={}",
-                    (callbackResult.getCode()==ReturnT.SUCCESS_CODE?"success":"fail"), handleCallbackParam, callbackResult);
+                    (callbackResult.getCode()==IJobHandler.SUCCESS.getCode()?"success":"fail"), handleCallbackParam, callbackResult);
         }
 
         return ReturnT.SUCCESS;
@@ -58,24 +55,37 @@ public class AdminBizImpl implements AdminBiz {
         if (log == null) {
             return new ReturnT<String>(ReturnT.FAIL_CODE, "log item not found.");
         }
+        if (log.getHandleCode() > 0) {
+            return new ReturnT<String>(ReturnT.FAIL_CODE, "log repeate callback.");     // avoid repeat callback, trigger child job etc
+        }
 
-        // trigger success, to trigger child job, and avoid repeat trigger child job
-        String childTriggerMsg = null;
-        if (ReturnT.SUCCESS_CODE==handleCallbackParam.getExecuteResult().getCode() && ReturnT.SUCCESS_CODE!=log.getHandleCode()) {
+        // trigger success, to trigger child job
+        String callbackMsg = null;
+        if (IJobHandler.SUCCESS.getCode() == handleCallbackParam.getExecuteResult().getCode()) {
             XxlJobInfo xxlJobInfo = xxlJobInfoDao.loadById(log.getJobId());
-            if (xxlJobInfo!=null && StringUtils.isNotBlank(xxlJobInfo.getChildJobKey())) {
-                childTriggerMsg = "<hr>";
-                String[] childJobKeys = xxlJobInfo.getChildJobKey().split(",");
-                for (int i = 0; i < childJobKeys.length; i++) {
-                    String[] jobKeyArr = childJobKeys[i].split("_");
-                    if (jobKeyArr!=null && jobKeyArr.length==2) {
-                        ReturnT<String> triggerChildResult = xxlJobService.triggerJob(Integer.valueOf(jobKeyArr[1]));
+            if (xxlJobInfo!=null && StringUtils.isNotBlank(xxlJobInfo.getChildJobId())) {
+                callbackMsg = "<br><br><span style=\"color:#00c0ef;\" > >>>>>>>>>>>"+ I18nUtil.getString("jobconf_trigger_child_run") +"<<<<<<<<<<< </span><br>";
+
+                String[] childJobIds = xxlJobInfo.getChildJobId().split(",");
+                for (int i = 0; i < childJobIds.length; i++) {
+                    int childJobId = (StringUtils.isNotBlank(childJobIds[i]) && StringUtils.isNumeric(childJobIds[i]))?Integer.valueOf(childJobIds[i]):-1;
+                    if (childJobId > 0) {
+
+                        JobTriggerPoolHelper.trigger(childJobId, TriggerTypeEnum.PARENT, 0, null, null);
+                        ReturnT<String> triggerChildResult = ReturnT.SUCCESS;
+
                         // add msg
-                        childTriggerMsg += MessageFormat.format("<br> {0}/{1} 触发子任务{2}, 子任务Key: {3}, 子任务触发备注: {4}",
-                                (i+1), childJobKeys.length, (triggerChildResult.getCode()==ReturnT.SUCCESS_CODE?"成功":"失败"), childJobKeys[i], triggerChildResult.getMsg());
+                        callbackMsg += MessageFormat.format(I18nUtil.getString("jobconf_callback_child_msg1"),
+                                (i+1),
+                                childJobIds.length,
+                                childJobIds[i],
+                                (triggerChildResult.getCode()==ReturnT.SUCCESS_CODE?I18nUtil.getString("system_success"):I18nUtil.getString("system_fail")),
+                                triggerChildResult.getMsg());
                     } else {
-                        childTriggerMsg += MessageFormat.format("<br> {0}/{1} 触发子任务失败, 子任务Key格式错误, 子任务Key: {2}",
-                                (i+1), childJobKeys.length, childJobKeys[i]);
+                        callbackMsg += MessageFormat.format(I18nUtil.getString("jobconf_callback_child_msg2"),
+                                (i+1),
+                                childJobIds.length,
+                                childJobIds[i]);
                     }
                 }
 
@@ -90,8 +100,8 @@ public class AdminBizImpl implements AdminBiz {
         if (handleCallbackParam.getExecuteResult().getMsg() != null) {
             handleMsg.append(handleCallbackParam.getExecuteResult().getMsg());
         }
-        if (childTriggerMsg !=null) {
-            handleMsg.append("<br>子任务触发备注：").append(childTriggerMsg);
+        if (callbackMsg != null) {
+            handleMsg.append(callbackMsg);
         }
 
         // success, save log
@@ -116,11 +126,6 @@ public class AdminBizImpl implements AdminBiz {
     public ReturnT<String> registryRemove(RegistryParam registryParam) {
         xxlJobRegistryDao.registryDelete(registryParam.getRegistGroup(), registryParam.getRegistryKey(), registryParam.getRegistryValue());
         return ReturnT.SUCCESS;
-    }
-
-    @Override
-    public ReturnT<String> triggerJob(int jobId) {
-        return xxlJobService.triggerJob(jobId);
     }
 
 }
